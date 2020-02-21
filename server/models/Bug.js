@@ -1,0 +1,16 @@
+import mongoose from "mongoose";
+const Schema = mongoose.Schema;
+const objectId = mongoose.Schema.Types.ObjectId
+
+const Bug = new Schema(
+  {
+    closed: { type: Boolean, required: true },
+    description: { type: String, required: true },
+    title: { type: String, required: true },
+    reportedBy: { type: String, required: true },
+    closedDate: { type: Date, required: true }
+  },
+  { timestamps: true, toJSON: { virtuals: true } }
+);
+
+export default Bug;
