@@ -1,5 +1,5 @@
 import express from "express";
-import valueService from "../services/ValueService";
+import valueService from "../services/NotesService";
 
 export default class ValueController {
   constructor() {
