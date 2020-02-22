@@ -13,6 +13,8 @@ class BugsService {
     return await _repository.findById(id)
   }
 
+
+
   async create(rawData) {
     return await _repository.create(rawData)
   }
@@ -22,7 +24,7 @@ class BugsService {
     if (bug["closed"] == false) {
       return await _repository.findByIdAndUpdate(id, update, { new: true })
     }
-    return "Bug is closed"
+    return "Bug is closed, it cannot be edited further."
   }
 
   async setClosed(id) {
