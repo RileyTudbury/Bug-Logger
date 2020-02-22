@@ -1,13 +1,13 @@
 import mongoose from "mongoose";
-import Value from "../models/Value";
+import Note from "../models/Note";
 
-const _repository = mongoose.model("Value", Value);
+const _repository = mongoose.model("Note", Note);
 
-class ValueService {
+class NotesService {
   async getAll() {
     return await _repository.find({});
   }
 }
 
-const valueService = new ValueService();
+const valueService = new NotesService();
 export default valueService;
