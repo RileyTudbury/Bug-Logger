@@ -10,8 +10,7 @@ class BugsService {
 
 
   async getById(id) {
-    debugger
-    await _repository.findById(id)
+    return await _repository.findById(id)
   }
 
   async create(rawData) {

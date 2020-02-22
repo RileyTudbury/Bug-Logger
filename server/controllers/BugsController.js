@@ -25,7 +25,6 @@ export default class BugsController {
   async getById(req, res, next) {
     try {
       let data = await bugsService.getById(req.params.id)
-      debugger
       res.send(data)
     }
     catch (error) {
