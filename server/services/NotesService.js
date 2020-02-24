@@ -23,16 +23,12 @@ class NotesService {
   }
 
   async edit(id, update) {
-
     return await _repository.findByIdAndUpdate(id, update, { new: true })
   }
 
   async deleteNote(id) {
-
-
+    return await _repository.findByIdAndDelete(id)
   }
-
-
 
 }
 const notesService = new NotesService();
